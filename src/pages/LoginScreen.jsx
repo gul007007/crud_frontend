@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import fetchDual from "../api/apiPassinGateway";
 
 const LoginScreen = () => {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ const LoginScreen = () => {
   const sendToDB = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("/api/login/", {
+      const response = await fetchDual("/api/login/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
