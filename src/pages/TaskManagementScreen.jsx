@@ -109,9 +109,9 @@ const TaskManagementScreen = () => {
   return (
     <>
       <div className="bg-[#282828] flex justify-around align-baseline py-4">
-        <h2 className="text-4xl font-bold">Task Management Screen</h2>
+        <h2 className="text-2xl md:text-4xl font-bold">Task Management Screen</h2>
 
-        <div>
+        <div className="flex flex-col gap-4 md:flex-row">
           <button
             type="button"
             onClick={openModal}
@@ -132,12 +132,12 @@ min-w-2.5 hover:cursor-pointer"
       </div>
 
       {/* list */}
-      <div className="bg-[#282828] w-3/4 h-[500px] overflow-scroll rounded-b-lg mx-auto py-4 px-5">
+      <div className="bg-[#282828] w-full md:w-3/4 h-[500px] overflow-scroll rounded-b-lg mx-auto py-4 px-5">
         {fetchedTask ? (
           fetchedTask.map((task) => {
             return (
               <div
-                className="flex mx-6 justify-between mb-1 border-b-2 pb-1"
+                className="flex mx-6 justify-around mb-1 border-b-2 pb-1"
                 key={task._id}
               >
                 <div className="flex gap-4">

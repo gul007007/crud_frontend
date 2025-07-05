@@ -1,7 +1,6 @@
 // const fetchDual = async (url, options = {}) => {
-//   const API_BASE_URL= "https://crud-token.vercel.app/";
 //   // Initial Req
-//   const request = await fetch(`${API_BASE_URL}${url}`, {
+//   const request = await fetch(url, {
 //     ...options,
 //     credentials: options.credentials || "include",
 //     headers: {
